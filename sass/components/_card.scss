@@ -3,7 +3,8 @@
 
 .card {
   background-color: $DarkBlue;
-  border-radius: 1rem;
+  border-radius: 1.75rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   padding: 1.5625rem;
   max-width: 415px;
   min-height: 415px;
