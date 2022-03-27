@@ -38,7 +38,7 @@ $("form").submit(function (e) {
 
   selectedValue = $("input:checked")[0].value;
   //get value of the checked input and insert it into span
-  $(".thanks p").append(`You selected ${selectedValue} out of 5`);
+  $(".thanks > p").append(`You selected ${selectedValue} out of 5`);
 
   //hide rate-card, show thanks-card
   rateCard.addClass("hidden");
