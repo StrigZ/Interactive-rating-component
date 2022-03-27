@@ -3,20 +3,16 @@ let selectedSpan = $("#selected");
 let thanksCard = $("#thanks-card");
 let rateCard = $("#rate-card");
 let selectedValue;
+let canSubmit = true;
 
 //onclick styles
 $("label").click(function (e) {
   e.preventDefault();
 
-  if (this.firstElementChild.checked === true) {
-    this.firstElementChild.checked = false;
-    this.firstElementChild.setAttribute("checked", " ");
-  } else {
+  if (!this.firstElementChild.checked === true) {
     this.firstElementChild.checked = true;
     this.firstElementChild.setAttribute("checked", "checked");
   }
-
-  selectedValue = $("input:checked")[0].value;
 });
 
 //hover styles
@@ -32,6 +28,14 @@ $(".checkbox").hover(
 //on submit actions
 $("form").submit(function (e) {
   e.preventDefault();
+
+  //If the rating is not selected, prevent further submissions
+  //and add error <p>
+  if (!selectedValue && canSubmit) {
+    canSubmit = false;
+    $("form").append(`<p class='error'>Please rate us 😊</p>`);
+  }
+
   selectedValue = $("input:checked")[0].value;
   //get value of the checked input and insert it into span
   $(".thanks p").append(`You selected ${selectedValue} out of 5`);

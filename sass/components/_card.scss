@@ -32,6 +32,7 @@
 
   form {
     width: 100%;
+    user-select: none;
     .rate-box {
       position: relative;
       @include flex(row, space-between, center);
@@ -72,6 +73,7 @@
 }
 .thanks {
   @include flex(column, center, center);
+  text-align: center;
   > p {
     background-color: lighten($DarkBlue, 5%);
     border-radius: 2rem;
@@ -79,9 +81,14 @@
     color: $Orange;
   }
   article {
-    text-align: center;
     h2 {
       margin-bottom: m.div($base-margin-bottom, 2);
     }
   }
+}
+.error {
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: $Orange;
 }

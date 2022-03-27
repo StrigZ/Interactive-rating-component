@@ -165,6 +165,10 @@ button:hover {
 }
 .card form {
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .card form .rate-box {
   position: relative;
@@ -215,6 +219,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .thanks > p {
   background-color: #303a46;
@@ -222,9 +227,13 @@ button:hover {
   padding: 0.25rem 1.25rem;
   color: #fb7413;
 }
-.thanks article {
-  text-align: center;
-}
 .thanks article h2 {
   margin-bottom: 0.625rem;
+}
+
+.error {
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: #fb7413;
 }/*# sourceMappingURL=index.css.map */
