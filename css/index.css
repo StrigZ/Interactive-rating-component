@@ -224,4 +224,7 @@ button:hover {
 }
 .thanks article {
   text-align: center;
+}
+.thanks article h2 {
+  margin-bottom: 0.625rem;
 }/*# sourceMappingURL=index.css.map */

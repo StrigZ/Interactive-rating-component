@@ -80,5 +80,8 @@
   }
   article {
     text-align: center;
+    h2 {
+      margin-bottom: m.div($base-margin-bottom, 2);
+    }
   }
 }
