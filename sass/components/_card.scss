@@ -1,0 +1,84 @@
+@use "../abstracts/" as *;
+@use "sass:math" as m;
+
+.card {
+  background-color: $DarkBlue;
+  border-radius: 1rem;
+  padding: 1.5625rem;
+  max-width: 415px;
+  min-height: 415px;
+  @include flex(column, space-between, flex-start);
+
+  > *:not(:last-child) {
+    margin-bottom: $base-margin-bottom;
+  }
+
+  .rate__img {
+    background-color: lighten($DarkBlue, 5%);
+    border-radius: 50%;
+    @include flex();
+    padding: 0.75rem;
+    width: 2.5em;
+  }
+
+  article {
+    h1 {
+      margin-bottom: m.div($base-margin-bottom, 2);
+    }
+    p {
+      opacity: 0.6;
+    }
+  }
+
+  form {
+    width: 100%;
+    .rate-box {
+      position: relative;
+      @include flex(row, space-between, center);
+      margin-bottom: $base-margin-bottom;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkbox {
+        border-radius: 50%;
+        background-color: lighten($DarkBlue, 5%);
+        width: clamp(2.5rem, 10vw, 3.25rem);
+        min-height: clamp(2.5rem, 10vw, 3.25rem);
+        opacity: 0.6;
+        @include flex();
+      }
+      .hover {
+        background-color: $LightGrey;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 1;
+      }
+      input:checked + .checkbox {
+        background-color: $Orange;
+        transition: all 0.1s ease;
+        opacity: 1;
+      }
+    }
+  }
+  @media (min-width: 567px) {
+    max-width: 415px;
+    min-height: 415px;
+  }
+}
+.thanks {
+  @include flex(column, center, center);
+  > p {
+    background-color: lighten($DarkBlue, 5%);
+    border-radius: 2rem;
+    padding: 0.25rem 1.25rem;
+    color: $Orange;
+  }
+  article {
+    text-align: center;
+  }
+}

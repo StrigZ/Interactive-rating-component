@@ -1,0 +1,6 @@
+@use "abstracts/" as *;
+body {
+  @include flex(column, center, center);
+  padding: 0.75rem;
+  background-color: $VeryDarkBlue;
+}

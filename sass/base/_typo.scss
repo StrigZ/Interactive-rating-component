@@ -1,0 +1,22 @@
+//Typography
+
+$font-size: 0.9375rem;
+$font-family: "Overpass", sans-serif;
+$fw-400: 400;
+$fw-700: 700;
+
+body,
+button {
+  font-family: $font-family;
+}
+
+h2 {
+  font-weight: $fw-700;
+}
+p {
+  font-size: $font-size;
+  font-weight: $fw-400;
+}
+li {
+  font-size: 0.75rem;
+}

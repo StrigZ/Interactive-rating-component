@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.75rem 0;
+  background-color: $Orange;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.625rem;
+  &:hover {
+    background-color: $White;
+    color: $Orange;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+}
