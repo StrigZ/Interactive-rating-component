@@ -137,6 +137,10 @@ button:hover {
   background-color: #252d37;
   border-radius: 1.75rem;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom, #252d37, #151c23);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-shadow: 200px 398px -133px rgba(255, 255, 255, 0.65) inset;
   padding: 1.5625rem;
   max-width: 415px;
   min-height: 415px;
